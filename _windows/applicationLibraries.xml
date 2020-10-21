@@ -1,0 +1,22 @@
+<application>
+  <component name="libraryTable">
+    <library name="javax.xml.bind:jaxb-api:2.3.0" type="repository">
+      <properties maven-id="javax.xml.bind:jaxb-api:2.3.0" />
+      <CLASSES />
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="org.jsoup:jsoup:1.9.2" type="repository">
+      <properties maven-id="org.jsoup:jsoup:1.9.2" />
+      <CLASSES>
+        <root url="jar://C:/JavaRushTasks/lib/jsoup-1.9.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://C:/JavaRushTasks/lib/jsoup-1.9.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://C:/JavaRushTasks/lib/jsoup-1.9.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
+</application>
