@@ -3,15 +3,24 @@ package Weather;
 public class Weather {
     private WeatherService weatherService;
 
-    private WeatherService createService(String serviceName) {
-        switch (serviceName) {
-            case ("GISMeteo"):
-                return new GISMeteoFactory().createWeatherService();
-            case ("MeteoProg"):
-                return new MeteoProgFactory().createWeatherService();
-            default:
-                return null;
+    private WeatherService createService(String serviceName) throws RuntimeException {
+
+        WeatherService result = weatherService;
+
+        if (weatherService == null || weatherService.getServiceName().equals(serviceName)) {
+            switch (serviceName) {
+                case ("GISMeteo"):
+                    result = new GISMeteoFactory().createWeatherService();
+                    break;
+                case ("MeteoProg"):
+                    result = new MeteoProgFactory().createWeatherService();
+                    break;
+                default:
+                    throw new RuntimeException("Я не могу создать " + serviceName);
+            }
         }
+
+        return result;
     }
 
     Weather(String serviceName) {
