@@ -8,7 +8,7 @@ public class App {
             System.out.println(weather.getServiceName());
             System.out.println(weather.getTemperature("Kyiv"));
 
-            weather.change("GISMeteo2");
+            weather.change("MeteoProg");
 
             System.out.println(weather.getServiceName());
 

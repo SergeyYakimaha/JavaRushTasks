@@ -7,7 +7,7 @@ public class Weather {
 
         WeatherService result = weatherService;
 
-        if (weatherService == null || weatherService.getServiceName().equals(serviceName)) {
+        if (weatherService == null || !weatherService.getServiceName().equals(serviceName)) {
             switch (serviceName) {
                 case ("GISMeteo"):
                     result = new GISMeteoFactory().createWeatherService();
