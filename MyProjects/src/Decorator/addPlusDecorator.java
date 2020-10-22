@@ -1,6 +1,6 @@
 package Decorator;
 
-public class addPlusDecorator implements PrinterInterface{
+public class addPlusDecorator implements PrinterInterface {
     private PrinterInterface wrapper;
 
     public addPlusDecorator(PrinterInterface wrapper) {

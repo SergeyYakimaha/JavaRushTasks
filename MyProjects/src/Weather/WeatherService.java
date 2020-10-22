@@ -1,17 +1,17 @@
 package Weather;
 
 public abstract class WeatherService {
-    private String serviceName;
+    private Services serviceName;
 
-    public WeatherService(String serviceName) {
+    public WeatherService(Services serviceName) {
         this.serviceName = serviceName;
     }
 
-    public String getServiceName() {
+    public Services getServiceName() {
         return serviceName;
     }
 
-    public void setServiceName(String serviceName) {
+    public void setServiceName(Services serviceName) {
         this.serviceName = serviceName;
     }
 

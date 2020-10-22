@@ -3,16 +3,16 @@ package Weather;
 public class Weather {
     private WeatherService weatherService;
 
-    private WeatherService createService(String serviceName) throws RuntimeException {
+    private WeatherService createService(Services serviceName) throws RuntimeException {
 
-        WeatherService result = weatherService;
+        WeatherService result = this.weatherService;
 
-        if (weatherService == null || !weatherService.getServiceName().equals(serviceName)) {
+        if (weatherService == null || this.weatherService.getServiceName() != serviceName) {
             switch (serviceName) {
-                case ("GISMeteo"):
+                case GISMETEO:
                     result = new GISMeteoFactory().createWeatherService();
                     break;
-                case ("MeteoProg"):
+                case METEOPROG:
                     result = new MeteoProgFactory().createWeatherService();
                     break;
                 default:
@@ -23,11 +23,11 @@ public class Weather {
         return result;
     }
 
-    Weather(String serviceName) {
+    Weather(Services serviceName) {
         this.weatherService = createService(serviceName);
     }
 
-    public void change(String serviceName) {
+    public void change(Services serviceName) {
         this.weatherService = createService(serviceName);
     }
 
@@ -35,7 +35,7 @@ public class Weather {
         return weatherService.getTemperature(city);
     }
 
-    public String getServiceName() {
+    public Services getServiceName() {
         return this.weatherService.getServiceName();
     }
 }
