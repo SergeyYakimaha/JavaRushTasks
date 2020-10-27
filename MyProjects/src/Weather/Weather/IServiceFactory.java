@@ -1,5 +1,5 @@
 package Weather;
 
 public interface IServiceFactory {
-    WeatherService createWeatherService();
+    Weather.WeatherService createWeatherService();
 }

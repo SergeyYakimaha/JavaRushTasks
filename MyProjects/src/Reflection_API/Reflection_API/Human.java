@@ -1,6 +1,6 @@
 package Reflection_API;
 
-public abstract class Human implements Action{
+public abstract class Human implements Action {
     protected String name;
     int age;
 
